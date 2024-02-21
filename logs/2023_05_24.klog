@@ -1,0 +1,89 @@
+
+
+TIME:
+2023年05月24日 10:13:10
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [加班.png]
+
+TIME:
+2023年05月24日 10:13:21
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [小敏],CONSTRAINT [1]
+
+TIME:
+2023年05月24日 15:42:49
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Upload file]
+>PATH [ROOT]
+>NAME [中考.xlsx]
+
+TIME:
+2023年05月24日 15:43:04
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Upload file]
+>PATH [ROOT]
+>NAME [23年招生计划分析表.xlsx]
+
+TIME:
+2023年05月24日 15:47:34
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Upload file]
+>PATH [ROOT]
+>NAME [23年招生计划分析表.xlsx]
+
+TIME:
+2023年05月24日 15:50:33
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Upload file]
+>PATH [ROOT]
+>NAME [副本SF竞赛区赛程表(2).xlsx]
+
+TIME:
+2023年05月24日 15:53:06
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [中考.xlsx]
+
+TIME:
+2023年05月24日 15:53:11
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Upload file]
+>PATH [ROOT]
+>NAME [中考.xlsx]

@@ -1,0 +1,185 @@
+
+
+TIME:
+2023年05月25日 09:56:46
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [23年招生计划分析表.xlsx]
+
+TIME:
+2023年05月25日 10:19:40
+TYPE:
+Exception
+CONTENT:
+java.lang.NullPointerException
+	at kohgylw.kiftd.server.service.impl.FileServiceImpl.checkImportFile(FileServiceImpl.java:137)
+	at kohgylw.kiftd.server.controller.HomeController.checkImportFile(HomeController.java:127)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+......
+
+TIME:
+2023年05月25日 10:21:50
+TYPE:
+Exception
+CONTENT:
+java.lang.NullPointerException
+	at kohgylw.kiftd.server.service.impl.FileServiceImpl.checkImportFile(FileServiceImpl.java:137)
+	at kohgylw.kiftd.server.controller.HomeController.checkImportFile(HomeController.java:127)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+......
+
+TIME:
+2023年05月25日 10:23:08
+TYPE:
+Exception
+CONTENT:
+java.lang.NullPointerException
+	at kohgylw.kiftd.server.service.impl.FileServiceImpl.checkImportFile(FileServiceImpl.java:138)
+	at kohgylw.kiftd.server.controller.HomeController.checkImportFile(HomeController.java:127)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+......
+
+TIME:
+2023年05月25日 10:36:07
+TYPE:
+Exception
+CONTENT:
+java.lang.NullPointerException
+	at kohgylw.kiftd.server.service.impl.FileServiceImpl.checkImportFile(FileServiceImpl.java:138)
+	at kohgylw.kiftd.server.controller.HomeController.checkImportFile(HomeController.java:127)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
+......
+
+TIME:
+2023年05月25日 10:52:35
+TYPE:
+Exception
+CONTENT:
+org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.handleParseFailure(StandardMultipartHttpServletRequest.java:122)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:113)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:86)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:93)
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1128)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:960)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+......
+
+TIME:
+2023年05月25日 10:54:03
+TYPE:
+Exception
+CONTENT:
+org.springframework.web.multipart.MultipartException: Failed to parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: the request was rejected because no multipart boundary was found
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.handleParseFailure(StandardMultipartHttpServletRequest.java:122)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:113)
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:86)
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:93)
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1128)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:960)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+......
+
+TIME:
+2023年05月25日 16:01:03
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [202101]
+>OPERATE [Upload file]
+>PATH [ROOT]
+>NAME [(数据表)获奖情况汇总.pdf]
+
+TIME:
+2023年05月25日 16:03:33
+TYPE:
+Exception
+CONTENT:
+com.alibaba.excel.exception.ExcelCommonException: Convert excel format exception.You can try specifying the 'excelType' yourself
+	at com.alibaba.excel.support.ExcelTypeEnum.recognitionExcelType(ExcelTypeEnum.java:104)
+	at com.alibaba.excel.support.ExcelTypeEnum.valueOf(ExcelTypeEnum.java:85)
+	at com.alibaba.excel.analysis.ExcelAnalyserImpl.choiceExcelExecutor(ExcelAnalyserImpl.java:66)
+	at com.alibaba.excel.analysis.ExcelAnalyserImpl.<init>(ExcelAnalyserImpl.java:55)
+	at com.alibaba.excel.ExcelReader.<init>(ExcelReader.java:27)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.build(ExcelReaderBuilder.java:214)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.sheet(ExcelReaderBuilder.java:251)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.sheet(ExcelReaderBuilder.java:239)
+	at kohgylw.kiftd.server.service.impl.FileServiceImpl.checkImportFile(FileServiceImpl.java:161)
+	at kohgylw.kiftd.server.controller.HomeController.checkImportFile(HomeController.java:127)
+......
+
+TIME:
+2023年05月25日 16:05:00
+TYPE:
+Exception
+CONTENT:
+com.alibaba.excel.exception.ExcelAnalysisException: Can not find any sheet!
+	at com.alibaba.excel.analysis.v07.XlsxSaxAnalyser.<init>(XlsxSaxAnalyser.java:117)
+	at com.alibaba.excel.analysis.ExcelAnalyserImpl.choiceExcelExecutor(ExcelAnalyserImpl.java:103)
+	at com.alibaba.excel.analysis.ExcelAnalyserImpl.<init>(ExcelAnalyserImpl.java:55)
+	at com.alibaba.excel.ExcelReader.<init>(ExcelReader.java:27)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.build(ExcelReaderBuilder.java:214)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.sheet(ExcelReaderBuilder.java:251)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.sheet(ExcelReaderBuilder.java:239)
+	at kohgylw.kiftd.server.service.impl.FileServiceImpl.checkImportFile(FileServiceImpl.java:161)
+	at kohgylw.kiftd.server.controller.HomeController.checkImportFile(HomeController.java:127)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+......
+
+TIME:
+2023年05月25日 16:06:19
+TYPE:
+Exception
+CONTENT:
+com.alibaba.excel.exception.ExcelAnalysisException: Can not find any sheet!
+	at com.alibaba.excel.analysis.v07.XlsxSaxAnalyser.<init>(XlsxSaxAnalyser.java:117)
+	at com.alibaba.excel.analysis.ExcelAnalyserImpl.choiceExcelExecutor(ExcelAnalyserImpl.java:103)
+	at com.alibaba.excel.analysis.ExcelAnalyserImpl.<init>(ExcelAnalyserImpl.java:55)
+	at com.alibaba.excel.ExcelReader.<init>(ExcelReader.java:27)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.build(ExcelReaderBuilder.java:214)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.sheet(ExcelReaderBuilder.java:251)
+	at com.alibaba.excel.read.builder.ExcelReaderBuilder.sheet(ExcelReaderBuilder.java:239)
+	at kohgylw.kiftd.server.service.impl.FileServiceImpl.checkImportFile(FileServiceImpl.java:161)
+	at kohgylw.kiftd.server.controller.HomeController.checkImportFile(HomeController.java:127)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-2)
+......

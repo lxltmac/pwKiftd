@@ -1,0 +1,243 @@
+
+
+TIME:
+2023年05月31日 09:59:21
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [sd],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 10:49:50
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [23444],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 10:50:07
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [小明111],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 11:01:29
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [小明111]
+
+TIME:
+2023年05月31日 11:01:31
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [23444]
+
+TIME:
+2023年05月31日 11:01:33
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [副本大视觉婚照拍摄脚本范本1.pptx]
+
+TIME:
+2023年05月31日 14:04:01
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七9、10合班],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 14:04:01
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七8、9合班],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 14:06:13
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [七8、9合班]
+
+TIME:
+2023年05月31日 14:06:15
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [七9、10合班]
+
+TIME:
+2023年05月31日 14:06:17
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [小敏]
+
+TIME:
+2023年05月31日 14:06:19
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [sd]
+
+TIME:
+2023年05月31日 14:07:05
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七9、10合班],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 14:07:05
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七8、9合班],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 14:09:13
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [七8、9合班]
+
+TIME:
+2023年05月31日 14:09:15
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [七9、10合班]
+
+TIME:
+2023年05月31日 14:09:21
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七9、10合班],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 14:09:21
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七8、9合班],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 14:09:27
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [七8、9合班]
+
+TIME:
+2023年05月31日 14:09:29
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete folder]
+>PATH [ROOT/]
+>NAME [七9、10合班]
+
+TIME:
+2023年05月31日 14:10:09
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七9、10合班],CONSTRAINT [0]
+
+TIME:
+2023年05月31日 14:10:09
+TYPE:
+Event
+CONTENT:
+>IP [0:0:0:0:0:0:0:1]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七8、9合班],CONSTRAINT [0]
