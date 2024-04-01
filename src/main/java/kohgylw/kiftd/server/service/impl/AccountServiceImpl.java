@@ -132,16 +132,12 @@ public class AccountServiceImpl implements AccountService {
 				VerificationCode vc = vcf.next(4);
 				session.setAttribute("VERCODE", vc.getCode());
 				response.setContentType("image/png");
-				System.out.println("处理 getNewLoginVerCode vc success");
 				OutputStream out = response.getOutputStream();
 				vc.saveTo(out);
-				System.out.println("处理 getNewLoginVerCode saveTo success");
 				out.flush();
 				out.close();
-				System.out.println("处理 getNewLoginVerCode成功");
 			}
 		} catch (IOException e) {
-			System.out.println(e);
 			try {
 				response.sendError(500);
 			} catch (IOException e1) {
