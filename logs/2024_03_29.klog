@@ -1,0 +1,111 @@
+
+
+TIME:
+2024年03月29日 03:10:07
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.135]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [(数据表)获奖情况汇总.pdf]
+
+TIME:
+2024年03月29日 03:10:10
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.135]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [中考.xlsx]
+
+TIME:
+2024年03月29日 03:10:16
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.135]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [副本SF竞赛区赛程表(2).xlsx]
+
+TIME:
+2024年03月29日 03:10:30
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.135]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Edit folder]
+>PATH [ROOT/]
+>NAME [七8、9合班]->[七1、2合班],CONSTRAINT [0]->[0]
+
+TIME:
+2024年03月29日 03:10:37
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.135]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Edit folder]
+>PATH [ROOT/]
+>NAME [七9、10合班]->[七3、4合班],CONSTRAINT [0]->[0]
+
+TIME:
+2024年03月29日 03:10:53
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.135]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Create new folder]
+>PATH [ROOT/]
+>NAME [七5、6合班],CONSTRAINT [0]
+
+TIME:
+2024年03月29日 08:25:54
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.135]
+>ACCOUNT [2023310404]
+>OPERATE [Upload file]
+>PATH [ROOT/七1、2合班]
+>NAME [呼吸灯-while循环.mix]
+
+TIME:
+2024年03月29日 08:29:08
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.13]
+>ACCOUNT [2023310404]
+>OPERATE [Upload file]
+>PATH [ROOT]
+>NAME [【学生资源】《探索数据的奥秘》-学生任务单及配套作业.docx]
+
+TIME:
+2024年03月29日 08:50:08
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.13]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT]
+>NAME [【学生资源】《探索数据的奥秘》-学生任务单及配套作业.docx]
+
+TIME:
+2024年03月29日 08:50:15
+TYPE:
+Event
+CONTENT:
+>IP [218.17.155.13]
+>ACCOUNT [zhangxiaofen]
+>OPERATE [Delete file]
+>PATH [ROOT/七1、2合班]
+>NAME [呼吸灯-while循环.mix]
