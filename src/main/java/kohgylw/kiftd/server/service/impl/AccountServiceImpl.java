@@ -41,18 +41,18 @@ public class AccountServiceImpl implements AccountService {
 			int line = 0;
 			int oval = 0;
 			switch (ConfigureReader.instance().getVCLevel()) {
-			case Standard: {
-				line = 6;
-				oval = 2;
-				break;
-			}
-			case Simplified: {
-				line = 1;
-				oval = 0;
-				break;
-			}
-			default:
-				break;
+				case Standard: {
+					line = 6;
+					oval = 2;
+					break;
+				}
+				case Simplified: {
+					line = 1;
+					oval = 0;
+					break;
+				}
+				default:
+					break;
 			}
 			// 验证码生成工厂，包含了一些不太容易误认的字符
 			vcf = new VerificationCodeFactory(45, line, oval, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'm',
@@ -131,13 +131,17 @@ public class AccountServiceImpl implements AccountService {
 			} else {
 				VerificationCode vc = vcf.next(4);
 				session.setAttribute("VERCODE", vc.getCode());
-				response.setContentType("image/apng");
+				response.setContentType("image/png");
+				System.out.println("处理 getNewLoginVerCode vc success");
 				OutputStream out = response.getOutputStream();
 				vc.saveTo(out);
+				System.out.println("处理 getNewLoginVerCode saveTo success");
 				out.flush();
 				out.close();
+				System.out.println("处理 getNewLoginVerCode成功");
 			}
 		} catch (IOException e) {
+			System.out.println(e);
 			try {
 				response.sendError(500);
 			} catch (IOException e1) {
