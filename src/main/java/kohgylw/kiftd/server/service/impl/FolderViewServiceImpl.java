@@ -13,6 +13,7 @@ import java.util.*;
 import kohgylw.kiftd.server.enumeration.*;
 import kohgylw.kiftd.server.util.*;
 import com.google.gson.*;
+import org.springframework.util.StringUtils;
 
 @Service
 public class FolderViewServiceImpl implements FolderViewService {
@@ -80,6 +81,11 @@ public class FolderViewServiceImpl implements FolderViewService {
 		fv.setFileList(fileList);
 		if (account != null) {
 			fv.setAccount(account);
+			if (!StringUtils.isEmpty(ConfigureReader.instance().getFolderCreatorName(account))) {
+				fv.setAccountName(ConfigureReader.instance().getFolderCreatorName(account));
+			}else {
+				fv.setAccountName(account);
+			}
 		}
 		if (ConfigureReader.instance().isAllowChangePassword()) {
 			fv.setAllowChangePassword("true");

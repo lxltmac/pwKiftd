@@ -813,12 +813,12 @@ function showAccountView(folderView) {
 		$("#tb")
 				.append(
 						"<button class='btn btn-link rightbtn hidden-xs' data-toggle='modal' data-target='#logoutModal'>注销 ["
-								+ folderView.account
+								+ folderView.accountName
 								+ "] <span class='glyphicon glyphicon-off' aria-hidden='true'></span></button>");
 		$("#tb2")
 				.append(
 						"<button class='btn btn-link' data-toggle='modal' data-target='#logoutModal'>注销 ["
-								+ folderView.account
+								+ folderView.accountName
 								+ "] <span class='glyphicon glyphicon-off' aria-hidden='true'></span></button>");
 		if (folderView.allowChangePassword == 'true') {
 			$("#tb")
