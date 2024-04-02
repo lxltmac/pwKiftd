@@ -38,7 +38,11 @@ public class AccountListener implements ReadListener<Account> {
                 request.setAttribute("parentId", "root");
                 request.setAttribute("folderName", account.getFolder());
                 request.setAttribute("folderConstraint", "0");
-                this.fs.newFolder(request);
+                try {
+                    this.fs.newFolder(request);
+                } catch (Exception e) {
+                    System.out.println("插入文件夹无效，或者已经存在");
+                }
             }
         } catch (Exception e) {
             throw new RuntimeException(e);

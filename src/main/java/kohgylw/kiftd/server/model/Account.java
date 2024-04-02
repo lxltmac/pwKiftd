@@ -18,4 +18,6 @@ public class Account {
     private String group;
 
     private String folder;
+
+    private String fGroup;
 }

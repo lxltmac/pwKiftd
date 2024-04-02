@@ -1031,6 +1031,33 @@ public class ConfigureReader {
 		}
 	}
 
+	public boolean isAccessFolder(Folder f, String account) {
+		if (f == null) {
+			return false;// 访问不存在的文件夹肯定是没权限
+		}
+		if (f.getFolderCreator().equals(account)) {
+			return true;
+		}
+		String vGroup = accountp.getProperty(account + ".group");
+		String fGroup = accountp.getProperty(f.getFolderName() + ".fGroup");
+		if (vGroup != null && fGroup != null) {
+			if ("*".equals(vGroup) || "*".equals(fGroup)) {
+				return true;
+			}
+			String[] vgs = vGroup.split(";");
+			String[] cgs = fGroup.split(";");
+			for (String vs : vgs) {
+				for (String cs : cgs) {
+					if (vs.equals(cs)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
+
+
 	public String getFolderCreatorName(String account) {
 		return StringUtils.isEmpty(accountp.getProperty(account + ".accountName")) ? account : accountp.getProperty(account + ".accountName");
 	}
@@ -1518,6 +1545,9 @@ public class ConfigureReader {
 			}
 			if (accountName != null) {
 				accountp.setProperty(accountNumber + ".accountName", accountName);
+			}
+			if(!StringUtils.isEmpty(account.getFolder()) && !StringUtils.isEmpty(account.getFGroup())){
+				accountp.setProperty(account.getFolder() + ".fGroup", account.getFGroup());
 			}
 			try (FileOutputStream accountSettingOut = new FileOutputStream(
 					this.confdir + ACCOUNT_PROPERTIES_FILE)) {

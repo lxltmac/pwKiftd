@@ -63,7 +63,9 @@ public class FolderViewServiceImpl implements FolderViewService {
 		for (Folder f : folders) {
 			if (ConfigureReader.instance().accessFolder(f, account)) {
 				f.setFolderCreatorName(ConfigureReader.instance().getFolderCreatorName(f.getFolderCreator()));
-				fs.add(f);
+				if (ConfigureReader.instance().isAccessFolder(f, account)) {
+					fs.add(f);
+				}
 			}
 		}
 		fv.setFolderList(fs);

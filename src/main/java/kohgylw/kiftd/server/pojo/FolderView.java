@@ -20,6 +20,7 @@ public class FolderView {
 	private List<Folder> folderList;
 	private List<Node> fileList;
 	private String account;
+	private String accountName;
 	private List<String> authList;
 	private String publishTime;
 	private String allowChangePassword;
@@ -32,6 +33,13 @@ public class FolderView {
 	private long filesOffset;// 文件列表查询偏移量
 	private int selectStep;// 查询步长
 
+	public String getAccountName() {
+		return accountName;
+	}
+
+	public void setAccountName(String accountName) {
+		this.accountName = accountName;
+	}
 	public Folder getFolder() {
 		return this.folder;
 	}
