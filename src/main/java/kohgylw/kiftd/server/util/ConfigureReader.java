@@ -1038,6 +1038,10 @@ public class ConfigureReader {
 		if (f.getFolderCreator().equals(account)) {
 			return true;
 		}
+		int cl = f.getFolderConstraint();
+		if (cl == 0) {
+			return true;
+		}
 		String vGroup = accountp.getProperty(account + ".group");
 		String fGroup = accountp.getProperty(f.getFolderName() + ".fGroup");
 		if (vGroup != null && fGroup != null) {
