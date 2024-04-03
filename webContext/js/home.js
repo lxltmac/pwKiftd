@@ -499,7 +499,7 @@ function getServerOS() {
 }
 
 // 获取实时文件夹视图
-function showFolderView(fid, targetId) {
+function showFolderView(fid, targetId, flag) {
 	// 判断是否正在进行另一个相同的请求，如果是则取消本次操作
 	if (loadingFolderView) {
 		return;
@@ -512,7 +512,8 @@ function showFolderView(fid, targetId) {
 		type : 'POST',
 		dataType : 'text',
 		data : {
-			fid : fid
+			fid : fid,
+			flag: flag
 		},
 		url : 'homeController/getFolderView.ajax',
 		success : function(result) {
@@ -941,10 +942,13 @@ function showPublishTime(folderView) {
 
 // 刷新文件夹视图
 function refreshFolderView() {
+    if(account != "zhangxiaofen"){
+        falg = true
+    }
 	if (locationpath != null && locationpath.length > 0) {
-		showFolderView(locationpath);
+		showFolderView(locationpath, null, falg);
 	} else {
-		showFolderView('root');
+		showFolderView('root', null, falg);
 	}
 	subscribeNotice();// 刷新时也判断是否有新公告需要显示
 }
@@ -952,9 +956,9 @@ function refreshFolderView() {
 // 返回上一级文件夹
 function returnPF() {
 	if (parentpath != null && parentpath != "null") {
-		showFolderView(parentpath);
+		showFolderView(parentpath, null, false);
 	} else {
-		showFolderView('root');
+		showFolderView('root', null, false);
 	}
 }
 

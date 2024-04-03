@@ -74,8 +74,8 @@ public class HomeController {
 
 	@RequestMapping(value = { "/getFolderView.ajax" }, produces = { CHARSET_BY_AJAX })
 	@ResponseBody
-	public String getFolderView(final String fid, final HttpSession session, final HttpServletRequest request) {
-		return fvs.getFolderViewToJson(fid, session, request);
+	public String getFolderView(final String fid, Boolean flag, final HttpSession session, final HttpServletRequest request) {
+		return fvs.getFolderViewToJson(fid, flag, session, request);
 	}
 	
 	@RequestMapping(value = { "/getRemainingFolderView.ajax" }, produces = { CHARSET_BY_AJAX })
