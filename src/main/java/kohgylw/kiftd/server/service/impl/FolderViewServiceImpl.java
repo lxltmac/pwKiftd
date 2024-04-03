@@ -1,5 +1,6 @@
 package kohgylw.kiftd.server.service.impl;
 
+import com.sun.corba.se.spi.ior.ObjectKey;
 import kohgylw.kiftd.server.service.*;
 import org.springframework.stereotype.*;
 import javax.annotation.*;
@@ -32,8 +33,11 @@ public class FolderViewServiceImpl implements FolderViewService {
 	private KiftdFFMPEGLocator kfl;
 
 	@Override
-	public String getFolderViewToJson(final String fid, final HttpSession session, final HttpServletRequest request) {
+	public String getFolderViewToJson(String fid, Boolean flag, final HttpSession session, final HttpServletRequest request) {
 		final ConfigureReader cr = ConfigureReader.instance();
+		if(Objects.isNull(flag)){
+			flag = true;
+		}
 		if (fid == null || fid.length() == 0) {
 			return "ERROR";
 		}
@@ -69,6 +73,13 @@ public class FolderViewServiceImpl implements FolderViewService {
 			}
 		}
 		fv.setFolderList(fs);
+		if (!StringUtils.isEmpty(account) && !account.equals("zhangxiaofen")) {
+			if (fs.size() > 0 && flag) {
+				//默认进入该用户的第一个权限文件夹目录
+				fid = fs.get(0).getFolderId();
+				return getFolderViewToJson(fid, flag, session, request);
+			}
+		}
 		long filesOffset = this.flm.countByParentFolderId(fid);// 文件的查询逻辑与文件夹基本相同
 		fv.setFilesOffset(filesOffset);
 		Map<String, Object> keyMap2 = new HashMap<>();
@@ -143,7 +154,7 @@ public class FolderViewServiceImpl implements FolderViewService {
 		}
 		// 如果啥么也不查，那么直接返回指定文件夹标准视图
 		if (keyWorld.length() == 0) {
-			return getFolderViewToJson(fid, request.getSession(), request);
+			return getFolderViewToJson(fid, false, request.getSession(), request);
 		}
 		Folder vf = this.fm.queryById(fid);
 		final String account = (String) request.getSession().getAttribute("ACCOUNT");
