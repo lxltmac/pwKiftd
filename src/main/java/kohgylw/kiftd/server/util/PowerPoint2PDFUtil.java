@@ -12,16 +12,15 @@ import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.List;
 
-import org.apache.poi.hslf.model.Slide;
-import org.apache.poi.hslf.model.TextRun;
-import org.apache.poi.hslf.usermodel.RichTextRun;
-import org.apache.poi.hslf.usermodel.SlideShow;
+import org.apache.poi.hslf.usermodel.*;
+import org.apache.poi.sl.usermodel.SlideShow;
 import org.apache.poi.xslf.usermodel.XMLSlideShow;
 import org.apache.poi.xslf.usermodel.XSLFShape;
 import org.apache.poi.xslf.usermodel.XSLFSlide;
 import org.apache.poi.xslf.usermodel.XSLFTextParagraph;
 import org.apache.poi.xslf.usermodel.XSLFTextRun;
 import org.apache.poi.xslf.usermodel.XSLFTextShape;
+import org.apache.poi.xssf.usermodel.XSSFShape;
 import org.springframework.stereotype.Component;
 
 import com.lowagie.text.Document;
@@ -46,9 +45,9 @@ import kohgylw.kiftd.server.enumeration.PowerPointType;
  */
 @Component
 public class PowerPoint2PDFUtil {
-	
+
 	/**
-	 * 
+	 *
 	 * <h2>执行PPT格式转换（ppt/pptx）</h2>
 	 * <p>将输入流中的PPT文件转换为PDF格式并输出至指定输出流，该方法线程阻塞。</p>
 	 * @author 青阳龙野(kohgylw)
@@ -69,37 +68,52 @@ public class PowerPoint2PDFUtil {
 		Image slideImage = null;
 		BufferedImage img = null;
 		if (type.equals(PowerPointType.PPT)) {
-			SlideShow ppt = new SlideShow(in);
+			HSLFSlideShow ppt = new HSLFSlideShow(in);
 			in.close();
 			pgsize = ppt.getPageSize();
-			Slide slide[] = ppt.getSlides();
+			// 获取PPT中的所有幻灯片
+			List<HSLFSlide> slide = ppt.getSlides();
 			pdfDocument.setPageSize(new Rectangle((float) pgsize.getWidth(), (float) pgsize.getHeight()));
 			pdfWriter.open();
 			pdfDocument.open();
-			for (int i = 0; i < slide.length; i++) {
-				TextRun[] truns = slide[i].getTextRuns();
-				for (int k = 0; k < truns.length; k++) {
-					RichTextRun[] rtruns = truns[k].getRichTextRuns();
-					for (int l = 0; l < rtruns.length; l++) {
-						if(Arrays.asList(GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames()).contains(rtruns[l].getFontName())) {
-							continue;
+			for (HSLFSlide hslfSlide : slide) {
+				for (HSLFShape hslfShape : hslfSlide.getShapes()) {
+					HSLFTextShape sh = (HSLFTextShape) hslfShape;
+					List<HSLFTextParagraph> textParagraphs = sh.getTextParagraphs();
+					for (HSLFTextParagraph hslfTextParagraph : textParagraphs) {
+						List<HSLFTextRun> textRuns = hslfTextParagraph.getTextRuns();
+						for (HSLFTextRun hslfTextRun : textRuns) {
+							if(Arrays.asList(GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames())
+									.contains(hslfTextRun.getFontFamily())) {
+								continue;
+							}
+							hslfTextRun.setFontFamily("WenQuanYi Zen Hei");
+							hslfTextRun.setFontIndex(1);
 						}
-						rtruns[l].setFontIndex(1);
-						rtruns[l].setFontName("WenQuanYi Zen Hei");
 					}
+	//				for (int k = 0; k < textParagraphs.length; k++) {
+	//					RichTextRun[] rtruns = truns[k].getRichTextRuns();
+	//					for (int l = 0; l < rtruns.length; l++) {
+	//						if(Arrays.asList(GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames()).contains(rtruns[l].getFontName())) {
+	//							continue;
+	//						}
+	//						rtruns[l].setFontIndex(1);
+	//						rtruns[l].setFontName("WenQuanYi Zen Hei");
+	//					}
+	//				}
+
+					img = new BufferedImage((int) Math.ceil(pgsize.width * zoom), (int) Math.ceil(pgsize.height * zoom),
+							BufferedImage.TYPE_INT_RGB);
+					Graphics2D graphics = img.createGraphics();
+					graphics.setTransform(at);
+
+					graphics.setPaint(Color.white);
+					graphics.fill(new Rectangle2D.Float(0, 0, pgsize.width, pgsize.height));
+					hslfSlide.draw(graphics);
+					graphics.getPaint();
+					slideImage = Image.getInstance(img, null);
+					table.addCell(new PdfPCell(slideImage, true));
 				}
-
-				img = new BufferedImage((int) Math.ceil(pgsize.width * zoom), (int) Math.ceil(pgsize.height * zoom),
-						BufferedImage.TYPE_INT_RGB);
-				Graphics2D graphics = img.createGraphics();
-				graphics.setTransform(at);
-
-				graphics.setPaint(Color.white);
-				graphics.fill(new Rectangle2D.Float(0, 0, pgsize.width, pgsize.height));
-				slide[i].draw(graphics);
-				graphics.getPaint();
-				slideImage = Image.getInstance(img, null);
-				table.addCell(new PdfPCell(slideImage, true));
 			}
 		}
 		if (type.equals(PowerPointType.PPTX)) {
